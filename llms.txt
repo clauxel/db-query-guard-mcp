@@ -1,0 +1,10 @@
+DB Query Guard MCP
+
+Paid remote MCP for governed database query review, SQL simulation, approvals, and audits.
+
+Website: https://dbqueryguard.clauxel.com/
+MCP endpoint: https://dbqueryguard.clauxel.com/mcp
+Server card: https://dbqueryguard.clauxel.com/.well-known/mcp/server-card.json
+Registry name: com.clauxel.dbqueryguard/dbqueryguard-mcp
+Auth: Authorization: Bearer <token> after checkout and token claim.
+Boundary: read-only fixed tools for database query governance; no arbitrary shell, arbitrary SQL, deployment, deletion, or payment configuration tools.
