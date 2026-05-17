@@ -1,0 +1,29 @@
+# DB Query Guard MCP Usage
+
+## Endpoint
+
+`https://dbqueryguard.clauxel.com/mcp`
+
+Transport: Streamable HTTP.
+
+## Headers
+
+```http
+Authorization: Bearer <token>
+Content-Type: application/json
+```
+
+## Initialize
+
+Use any MCP client that supports remote Streamable HTTP MCP servers. Configure the server URL as `https://dbqueryguard.clauxel.com/mcp` and pass the bearer token in the Authorization header.
+
+## Token Flow
+
+1. Open https://dbqueryguard.clauxel.com/pricing/?utm_source=github&utm_medium=directory&utm_campaign=sbl202605.
+2. Choose a plan and complete checkout.
+3. Claim the one-time MCP bearer token from the hosted claim flow.
+4. Paste only the token value into your MCP client secret field.
+
+## Capability Boundary
+
+The server is intentionally read-only. It exposes fixed tools for database query governance; it does not expose arbitrary shell execution, arbitrary SQL, deployment controls, deletion tools, or payment-configuration edits.
