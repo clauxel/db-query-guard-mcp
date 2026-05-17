@@ -1,0 +1,38 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.clauxel.dbqueryguard/dbqueryguard-mcp",
+  "title": "DB Query Guard MCP",
+  "description": "Paid remote MCP for governed database query review, SQL simulation, approvals, and audits.",
+  "version": "0.1.0",
+  "websiteUrl": "https://dbqueryguard.clauxel.com/",
+  "icons": [
+    {
+      "src": "https://dbqueryguard.clauxel.com/favicon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "any"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://dbqueryguard.clauxel.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token issued after checkout and MCP token claim.",
+          "isRequired": true,
+          "isSecret": true,
+          "placeholder": "Bearer <token>"
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "serverCardUrl": "https://dbqueryguard.clauxel.com/.well-known/mcp/server-card.json",
+      "accessModel": "paid_mcp_bearer_token"
+    }
+  }
+}
